@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: Starter
+Plugin Name: External slugified Thumbnail
 Plugin URI: http://www.kadimi.com/
-Description: Starter
+Description: External slugified Thumbnail
 Version: 1.0.0
 Author: Nabil Kadimi
 Author URI: http://kadimi.com
@@ -14,3 +14,6 @@ include dirname( __FILE__ ) . '/skelet/skelet.php';
 
 // Include options definitions
 skelet_dir( dirname( __FILE__ ) . '/data' );
+
+// Include main functions
+include dirname( __FILE__ ) . '/functions.php';
