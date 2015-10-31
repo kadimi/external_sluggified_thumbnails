@@ -1,15 +1,20 @@
 <?php
-
 add_filter( 'post_thumbnail_html', 'est_image_src', 10, 5 );
 function est_image_src( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
 
+	$post = get_post( $post_id );
+
+	// Only support posts
+	if ( 'post' !== $post->post_type ) {
+		return $html;
+	}
+
 	// Do nothing if featured image exists
-	if ( empty( $html ) ) {
+	if ( ! empty( $html ) ) {
 		return $html;
 	}
 
 	// Do nothing if post doesn't exist
-	$post = get_post( $post_id );
 	if ( ! $post ) {
 		return $html;
 	}
@@ -17,7 +22,7 @@ function est_image_src( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
 	$category_slug =  $category[0]->slug;
 
 	// Build URL
-	$src = paf( 'external_slugified_thumbnail_pattern' );
+	$src = paf( 'external_slugified_thumbnails_pattern' );
 	$src = str_replace(
 		array(
 			'{{POST_SLUG}}',

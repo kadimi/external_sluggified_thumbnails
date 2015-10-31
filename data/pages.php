@@ -1,8 +1,8 @@
 <?php
 
 // Register options page
-paf_pages( array( 'external_slugified_thumbnail' => array(
+paf_pages( array( 'external_slugified_thumbnails' => array(
     'parent'      => 'options-general.php',
-    'title'       => __( 'External slugified Thumbnail' ),
-    'menu_title'  => __( 'External slugified Thumbnail' ),
+    'title'       => __( 'External slugified Thumbnails' ),
+    'menu_title'  => __( 'External slugified Thumbnails' ),
 ) ) );

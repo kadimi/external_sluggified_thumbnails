@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: External slugified Thumbnail
+Plugin Name: External slugified Thumbnails
 Plugin URI: http://www.kadimi.com/
-Description: External slugified Thumbnail
+Description: External slugified Thumbnails
 Version: 1.0.0
 Author: Nabil Kadimi
 Author URI: http://kadimi.com
